@@ -1,17 +1,19 @@
-# Lineage2 Roster Dashboard (Google Sheets Sync)
+# Lineage 2 Roster Dashboard — Google Sheets Sync Bundle
 
-## Files
-- src/App.jsx — full dashboard (integrated with Google Sheets sync)
-- src/lib/sheetsClient.js — helper to GET/POST state to your Apps Script web app
-- .env.example — environment variables
+## What’s Inside
+- src/App.jsx — React dashboard (integrated with Sheets sync)
+- src/lib/sheetsClient.js — fetch helpers with token support
+- .env.example — env vars (URL + token)
+- roster_template_with_samples.csv — sample roster data with correct headers
 - README.md — this file
 
 ## Setup
-1. Copy .env.example to .env and fill with your Web App URL and token.
-2. Deploy your Google Apps Script with TOKEN='my-super-secret-123'.
-3. In Vercel, add env vars: VITE_SHEETS_API_URL and VITE_SHEETS_TOKEN.
-4. Replace App.jsx and sheetsClient.js with these versions.
-5. Run `npm install && npm run dev` to test locally.
-6. Push/redeploy to Vercel.
+1. Copy .env.example to .env and ensure values are correct.
+2. Deploy your Google Apps Script Web App with TOKEN = "my-super-secret-123".
+3. On Vercel, set the same env vars.
+4. Replace files in your project with these versions.
+5. Run locally with `npm run dev`, then redeploy to Vercel.
 
-Open dashboard in two browsers and edits will sync via Google Sheets every ~5s.
+## Google Sheet
+- Must have a tab "State" (leave blank).
+- Must have a tab "Roster" with headers from the CSV included here.
