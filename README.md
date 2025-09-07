@@ -1,19 +1,16 @@
-# Lineage 2 Roster Dashboard — Google Sheets Sync Bundle
+# Lineage 2 Crafting Dashboard
+
+React dashboard that helps Lineage 2 players calculate the materials needed to craft gear.
 
 ## What’s Inside
-- src/App.jsx — React dashboard (integrated with Sheets sync)
-- src/lib/sheetsClient.js — fetch helpers with token support
-- .env.example — env vars (URL + token)
-- roster_template_with_samples.csv — sample roster data with correct headers
-- README.md — this file
+- `src/App.jsx` — UI for selecting gear type and quantity.
+- `src/data/recipes.js` — crafting recipes for various items.
+- `vite.config.js` — Vite configuration for development/build.
 
 ## Setup
-1. Copy .env.example to .env and ensure values are correct.
-2. Deploy your Google Apps Script Web App with TOKEN = "my-super-secret-123".
-3. On Vercel, set the same env vars.
-4. Replace files in your project with these versions.
-5. Run locally with `npm run dev`, then redeploy to Vercel.
+1. Install dependencies: `npm install`
+2. Run the app in dev mode: `npm run dev`
+3. Build for production: `npm run build`
 
-## Google Sheet
-- Must have a tab "State" (leave blank).
-- Must have a tab "Roster" with headers from the CSV included here.
+## Extending Recipes
+The recipes list is not exhaustive. To add more items, edit `src/data/recipes.js` and add a new entry following the existing structure.
